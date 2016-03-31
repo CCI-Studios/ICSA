@@ -212,21 +212,8 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'ICSA',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+$databases = array();
+
 
 /**
  * Access control for update.php script.
@@ -258,7 +245,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = 'boSR2Pwjee14gRhf-xEPHclFpj0GMVghmCjHd4s6B2g';
+$drupal_hash_salt = '';
 
 /**
  * Base URL (optional).
@@ -598,3 +585,52 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash sign to enable.
  */
 # $conf['theme_debug'] = TRUE;
+
+
+if (defined('PANTHEON_ENVIRONMENT')) {
+  // Drupal caching in development environments.
+  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
+    // Anonymous caching.
+    $conf['cache'] = 0;
+    // Block caching - disabled.
+    $conf['block_cache'] = 0;
+    // Expiration of cached pages - none.
+    $conf['page_cache_maximum_age'] = 0;
+    // Aggregate and compress CSS files in Drupal - off.
+    $conf['preprocess_css'] = 0;
+    // Aggregate JavaScript files in Drupal - off.
+    $conf['preprocess_js'] = 0;
+  }
+  // Drupal caching in test and live environments.
+  else {
+    // Anonymous caching - enabled.
+    $conf['cache'] = 1;
+    // Block caching - enabled.
+    $conf['block_cache'] = 1;
+    // Expiration of cached pages - 15 minutes.
+    $conf['page_cache_maximum_age'] = 900;
+    // Aggregate and compress CSS files in Drupal - on.
+    $conf['preprocess_css'] = 1;
+    // Aggregate JavaScript files in Drupal - on.
+    $conf['preprocess_js'] = 1;
+  }
+  // Minimum cache lifetime - always none.
+  $conf['cache_lifetime'] = 0;
+  // Cached page compression - always off.
+  $conf['page_compression'] = 0;
+  
+  if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
+      $base_url = 'https://icsa.global';  // NO trailing slash!
+  }
+}
+else
+{
+    $databases['default']['default'] = array(
+        'driver' => 'mysql',
+        'database' => 'ICSA',
+        'username' => 'root',
+        'password' => 'root',
+        'host' => 'localhost',
+        'prefix' => '',
+    );
+}
