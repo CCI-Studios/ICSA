@@ -620,7 +620,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   $conf['page_compression'] = 0;
   
   if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'live') {
-      //$base_url = 'https://icsa.global';  // NO trailing slash!
+      $base_url = 'https://icsa.global';  // NO trailing slash!
   }
 }
 else
