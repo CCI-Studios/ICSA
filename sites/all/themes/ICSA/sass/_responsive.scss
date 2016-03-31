@@ -1,0 +1,431 @@
+
+@media screen and (max-width:1090px)
+{	
+	#navigation > div
+	{
+		padding: 0px 10px 20px;
+	}
+
+	.front 
+	{	
+		#banner
+		{
+			height: 384px;
+		}
+	
+		#region-banner
+		{	
+			max-width: 767px;
+			background-size: contain;
+			height: 388px;
+		}
+	}
+
+	#block-block-1
+	{
+		.content div
+		{
+			height: 320px;
+
+			a
+			{
+				font-size: 	28px;
+				padding: 95px 50px;
+			}
+
+			&:first-child + div a
+			{
+				padding: 84px 50px;
+			}
+		}
+	} 
+
+	.view-members-listing .view-content 
+	{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:860px)
+{	
+	#logo
+	{
+		width: 300px;
+
+		img
+		{
+			width: 100%;
+		}
+	}
+
+	.view-icsa-members,
+	#block-views-full-members-block,
+	.view-correspondent-members
+	{
+		text-align: center;
+	}
+
+	#block-block-2 
+	{
+		li span:first-child + span
+		{
+			width: 90%;
+		}
+	}
+
+	#block-system-main-menu li.expanded .submenu
+	{
+		top: 96px;
+	}
+
+	#block-system-main-menu > .content > ul.menu > li.expanded > .submenu
+	{
+		top: 95px;
+	}
+
+}
+
+@media screen and (min-width:768px)
+{
+	#block-system-main-menu
+	{
+		display: block!important;
+
+		li.expanded
+		{
+			.submenu
+			{
+				display: none;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width:767px)
+{	
+	#block-user-login,
+	#login-block,
+	#user-register-form,
+	form,
+	.webform-client-form 
+	{
+		input
+		{
+			width: 93%;
+		}
+
+		select
+		{
+			width: 99%;
+		}
+	}
+
+	#main-wrapper
+	{
+		padding-bottom:100px;
+	}
+
+	#block-system-main-menu > .content > ul.menu > #members-area-link.expanded > .submenu > ul.menu li
+	{
+		max-width: inherit;
+	}
+
+	#user-register-form .field-type-file
+	{
+		width: 99%;
+	}
+
+	.not-front #main-title
+	{
+		font-size: 2.45em;
+		line-height: inherit;
+	}
+
+	.front h2, 
+	#blue-region h2, 
+	#white-region h2, h1
+	{
+		font-size: 2.3em;
+	}
+
+	#block-block-2 li span:first-child + span
+	{
+		width: 85%;
+	}
+
+	#block-block-1
+	{
+		.content div
+		{
+			width: 100%;
+			float: none;
+			border-bottom:1px solid #ccc;
+
+			&:last-child
+			{
+				width: 100%;
+			}
+		}
+	} 
+
+	#footer ul.menu
+	{
+		display: none;
+	}
+
+	#block-block-8
+	{
+		display: block;
+		color:white;
+		padding-top:25px;
+		max-width: 300px;
+		margin: 0 auto;
+		font-size: 14px;
+
+		.content div
+		{
+			float: left;
+			width: 45%;
+
+			p
+			{
+				padding-bottom:10px;
+			}
+
+			&:first-child + div
+			{
+				float: right;
+			}
+		}
+	}
+
+	#logo
+	{	
+		width: 300px;
+		margin: 0 auto;
+		display: block;
+		clear: right;
+		float: none;
+		padding-top:15px;
+	}
+
+	#block-block-7
+	{
+		display: block;
+		clear: left;
+		text-align: center;
+		padding-top:20px;
+
+		a
+		{
+			text-transform: uppercase;
+			text-decoration: none;
+			color:$yellow;
+			font-weight: bold;
+		}
+	}
+
+	.front 
+	{	
+		#banner
+		{
+			height: 300px;
+		}
+
+		#region-banner
+		{
+			background: url(../images/mobile-map1.png) no-repeat;
+			background-position: center;
+			background-size: contain;
+			height: 300px;
+		}
+		
+	}
+
+	#edit-account, 
+	#edit-account + .container
+	{
+		width: 100%;
+		float: none;
+	}
+
+	#login
+	{
+		margin-right: 10px;
+	}
+
+	.region-navigation
+	{
+		float: none;
+	}
+
+	#navigation > div
+	{
+		padding:0px;
+	}
+
+	#block-system-main-menu
+	{
+		display: none;
+		background-color: $blue;
+		padding-top:0px;
+
+		& > .content > .menu > li > a
+		{
+			padding-bottom: 10px;
+		}
+
+		& > .content > ul.menu > li.expanded 
+		{	
+			& > .submenu > .menu > li
+			{
+				display: block;
+			}
+
+			&>.submenu
+			{
+				position: relative;
+				top:0px;
+				box-shadow: none;
+				background-color: #0b599b;
+
+				ul.menu 
+				{	
+					margin: 0px;
+					& > li a
+					{
+						padding:10px 20px;
+					}
+				}
+
+				&>.menu > li.expanded > .submenu li a
+				{
+					padding-left: 40px;
+				}
+			}
+
+			&:hover
+			{
+				.submenu
+				{
+					display: none;
+				}
+			}
+			
+		}
+
+		li
+		{
+			float: none;
+			padding-right:0px;
+			margin:0px;
+
+			a
+			{
+				padding: 10px;
+				display: block;
+				color:white;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #1e66a3;
+			}
+		}
+		
+		li.expanded
+		{	
+			&>a
+			{
+				background:url(../images/polygon-down.png) no-repeat;
+				background-position: 96% center;
+			}
+
+			&>a.close
+			{
+				background:url(../images/polygon-up.png) no-repeat;
+				background-position: 96% center;
+			}
+			
+			&:hover .submenu
+			{
+				position: relative;
+				top: 0;
+				display: none;
+			}	
+
+			.submenu
+			{
+				display: none;
+				text-align: left;
+				box-shadow: none;
+				
+
+				li
+				{
+					display: block;
+				}
+			}
+		}
+	}
+
+	.not-front #region-banner
+	{
+		min-height: inherit;
+	}
+
+	.not-front #main-title
+	{
+		padding: 80px 10px;
+	}
+
+	#block-webform-client-block-28, #block-block-4
+	{
+		float: none;
+		width: 100%;
+	}
+
+	#block-block-4
+	{	
+		padding-left: 0px;
+		margin-left: 0px;
+		padding-top: 40px;
+		margin-top: 20px;
+		border-top: 2px solid $yellow;
+
+		h2
+		{
+			padding-left: 0px;
+		}
+
+		.content
+		{
+			padding-left: 0px;
+			border-left: 0px;
+		}
+	}
+
+
+	.view-members-listing
+	{
+		.views-row
+		{
+			border-bottom: 1px solid $lightgrey;
+			padding-bottom: 40px;
+		}
+	}
+		
+}
+
+@media screen and (max-width:392px)
+{	
+
+	#block-views-full-members-block, #block-views-correspondent-members-block,.view-icsa-members
+	{
+		.views-row
+		{
+			padding: 20px 0px;
+			border-bottom:1px solid $lightgrey;
+		}
+	}
+}
+
+

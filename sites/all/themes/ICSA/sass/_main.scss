@@ -1,0 +1,1388 @@
+
+@font-face {
+    font-family: FrutigerBold;
+    src: url(../fonts/FrutigerLTStd-BoldCn.woff);
+}
+
+@font-face {
+    font-family: FrutigerLight;
+    src: url(../fonts/FrutigerLTStd-Light.woff);
+}
+
+body
+{
+	font-family: 'FrutigerLight', sans-serif;
+	color:$darkergrey;
+}
+
+tbody
+{
+	border:0px;
+}
+
+a
+{
+	color:$darkergrey;
+	&:hover
+	{
+		color:$yellow;
+	}
+}
+
+.layout
+{
+	max-width: 945px;
+	margin: 0px auto;
+	padding:60px 10px;
+}
+
+.front #content
+{
+	display:none;
+}
+
+#navigation 
+{	
+	position: relative;
+	box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+
+	&>div
+	{
+		@extend .layout;
+		padding: 0px 10px 20px;
+	}
+}
+
+h1,h2
+{
+	color:$blue;
+	text-align:center;
+	text-transform:uppercase;
+	font-family: FrutigerBold;
+}
+
+h4
+{
+	color:$blue;
+}
+
+h2
+{	
+	font-size:38px;
+}
+
+#cover
+{ 	
+	display:none;
+	position:fixed; 
+	top:0; 
+	left:0; 
+	background:rgba(0,0,0,0.6);
+	z-index:5; width:100%; 
+	height:100%;
+} 
+
+.front h2,
+#block-user-login h2,
+#blue-region h2,
+#white-region h2,
+h1
+{
+	font-size: 3.8em;
+	padding-bottom:0.4em;
+}
+
+h3,
+.views-field-title a
+{
+	color:$blue;
+	font-size:28px;
+	padding-bottom:20px;
+}
+
+li,p
+{
+	padding-bottom: 20px;
+}
+
+#block-system-main-menu,
+#block-menu-menu-footer-menu
+{	
+	padding-top:15px;
+
+	li
+	{
+		float: left;
+		list-style: none;
+		margin-right:13px;
+
+		&:last-child
+		{
+			margin-right:0px;
+		}
+	}
+
+	a
+	{
+		text-decoration: none;
+		color:$darkgrey;
+		font-size: 14px;
+		font-weight: bold;
+
+		&:hover
+		{
+			color:$yellow;
+		}
+	}
+
+
+}
+
+#block-system-main-menu
+{	
+
+	position: static;
+
+
+	&>.content>.menu>li>a
+	{
+		padding-bottom:32px;
+	}
+
+	&>.content
+	{
+		position: static;
+	}
+
+	&>.content > ul.menu >li.expanded 
+	{	
+		&> .submenu.close
+		{
+			display: none;
+		}
+
+		& > .submenu
+		{	
+			z-index: 99;
+			display: none;
+			position:absolute;
+			top:98px;
+			width: 100%;
+			text-align: center;
+			background:$blue;
+			left: 0px;
+			box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+
+			&>.menu>li.expanded > .submenu
+			{	
+				border-top:1px solid white;
+				li
+				{
+					float: none;
+					a
+					{
+						padding:5px 10px;
+					}
+				}
+			}
+
+			&>.menu>li
+			{	
+				float: none;
+				display: inline-block;
+				vertical-align: top;
+
+				&:before
+				{
+					display: none;
+				}
+
+				a
+				{
+					color:white;
+					display: block;
+					padding:15px 5px 5px 5px;
+					text-align: left;
+
+					&:hover
+					{
+						color:$yellow;
+					}
+				}
+			}
+		}
+
+		&:hover .submenu
+		{
+			display: block;
+			
+		}
+
+		&> .submenu > ul.menu
+		{
+			max-width: 980px;
+			margin: 5px auto 15px;
+			text-align: center;
+		}
+	}
+}
+
+#block-system-main-menu > .content > ul.menu > #members-area-link.expanded > .submenu > ul.menu
+{
+	text-align: left;
+
+	li
+	{
+		max-width: 94px;
+		margin-right: 0px;
+	}
+}
+
+
+#logo
+{
+	float:left;	
+	clear:right;
+}
+
+.region-navigation
+{
+	float:right;
+}
+
+.front #banner
+{
+	background:url(../images/map-bg.png) no-repeat;
+	background-size:cover;
+	height: 500px;
+	background-position: center;
+}
+
+.front #region-banner
+{	
+	max-width: 1620px;
+    margin: 0 auto;
+	background:url(../images/map1.png) no-repeat;
+	background-position:center;
+	height: 500px;
+	background-size: contain;
+}
+
+.front #white-region >div
+{
+	padding-bottom:30px;
+}
+
+
+#main-wrapper
+{
+	background:url(../images/globe.png) no-repeat;
+	background-position:top right;
+	background-position-y: -58px;
+	padding-bottom: 112px;
+
+}	
+
+strong
+{
+	font-family: FrutigerBold;
+}
+
+#block-block-2 > h2,
+#main-title
+{	
+	font-family: FrutigerBold;
+	text-transform: uppercase;
+	color:$blue;
+	text-align: center;
+}
+
+.first-word
+{
+	color:$lightgrey;
+	font-family: FrutigerLight, sans-serif;
+	font-weight: normal;
+}
+
+#block-block-2
+{	
+	padding-top:50px;
+
+	.content
+	{
+		@extend .layout;
+		padding-bottom: 50px;
+		padding-top: 0px;
+
+		span
+		{
+			line-height: 1.8em;
+			vertical-align: middle;
+		}
+	}
+
+	h3
+	{
+		font-size: 20px;
+	}
+
+	&> h2
+	{
+		text-decoration: none;
+		color:$blue;
+		cursor:default;
+	}
+
+	p
+	{
+		line-height: 1.8em;
+	}
+
+	ul
+	{
+		padding-left: 30px;
+	}
+
+	li
+	{	
+		list-style: none;
+		
+		span:first-child
+		{
+			color:$blue;
+			font-size: 38px;
+			line-height: 23px;
+			vertical-align: middle;
+			padding-right: 20px;			
+		}
+
+		span:first-child+span
+		{
+			display: inline-block;
+			width: 95%;
+		}
+	}	
+}
+
+#block-block-1
+{	
+	overflow:hidden;
+
+	.content 
+	{	
+		div
+		{
+			width: 33.33%;
+			float: left;
+			height: 463px;
+			text-align: center;
+
+			a
+			{
+				color:white;
+				display: block;
+				vertical-align: middle;
+				font-size: 42px;
+				line-height: 1em;
+				padding: 157px 50px;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:before
+				{
+					content:"";
+					display: block;
+					padding-bottom: 20px;
+				}
+
+				&:hover
+				{
+					color:$yellow;
+				}
+			}
+		}
+	
+		div:first-child
+		{
+			background: url(../images/membership-bg.png) no-repeat;
+			background-size:cover;
+
+			a:before
+			{
+				content:url(../images/globe-yellow.png);
+				display: block;
+			}
+		}
+
+		div:first-child+div
+		{
+			background: url(../images/annual-meeting-bg.png) no-repeat;
+			background-size:cover;
+
+			a
+			{
+				padding:139px 50px;
+			}
+
+			a:before
+			{
+				content:url(../images/bars.png);
+			}
+		}
+
+		div:last-child
+		{
+			background: url(../images/secretariat-bg.png) no-repeat;
+			background-size:cover;
+
+			a:before
+			{
+				content:url(../images/mobile.png);
+			}
+		}
+	}
+}
+
+#block-views-full-members-block
+{
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	border-bottom: 2px solid $yellow;
+}
+
+#block-views-icsa-members-block,
+#block-views-full-members-block,
+#block-views-correspondent-members-block
+{	
+	.view-content
+	{
+		@extend	.layout;
+		padding: 10px 0px;
+		text-align: center;
+	}
+
+	.views-row
+	{
+		display: inline-block;
+		width: 184px;
+		height: 88px;
+		text-align: center;
+	}
+}
+
+#page-wrapper
+{	
+	position: relative;
+	min-height:100%;
+	
+}
+
+
+#footer
+{
+	background:#e6e6e6;
+	overflow:hidden;
+	clear:left;
+	position: absolute;
+	width:100%;
+	bottom: 0px;
+
+	ul.menu
+	{
+		text-align:center;
+	}
+
+	li
+	{
+		display: inline-block;
+		float: none;
+		margin-right:5px;
+		padding:0px;
+		
+	}
+
+	a
+	{
+		color:#043369;
+	}
+
+	.region-footer
+	{
+		display: inline-block;
+	}
+
+	&>div
+	{
+		@extend .layout;
+		padding: 40px 10px;
+		text-align:center;
+	}
+}
+
+#footer-logo
+{
+	float:left;
+}
+
+#copyright
+{
+	float:right;
+	text-align: right;
+	font-size: 12px;
+	color:#043369;
+}
+
+#login
+{
+	position: relative;
+	float:right;
+	color: white;
+	background:$blue;
+	text-transform:uppercase;
+	border-radius: 0px 0px 3px 3px;
+
+	a
+	{
+		color:white;
+		text-decoration:none;
+		padding-right:8px;
+		font-size: 14px;
+		font-weight: bold;
+		padding:10px;
+		display: inline-block;
+
+		&:hover
+		{
+			background:$yellow;
+		}
+
+		&:last-child
+		{	
+			padding-left:8px;
+			margin-right: -1px;
+		}
+	}
+}
+
+.logged-in
+{
+	#login a
+	{
+		border:0px;
+	}
+}
+
+#block-user-login
+{	
+	display:none;
+	position: fixed;
+	top:50%;
+	left:50%;
+	padding: 50px 30px 30px;
+	transform:translateY(-50%) translateX(-50%);
+	-moz-transform:translateY(-50%) translateX(-50%);
+	-webkit-transform:translateY(-50%) translateX(-50%);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	background: white;
+	border-radius: 10px;
+	text-align: center;
+	z-index:9999999;
+
+	label
+	{
+		text-align: left;
+	}
+
+	#cross
+	{
+		position: absolute;
+		font-size: 0px;
+		top: 10px;
+		right: 0px;
+		padding:20px;
+		cursor: pointer;
+		background:url(../images/cross.png) no-repeat;
+	}
+
+	h2
+	{
+		padding-bottom: 0px;
+	}
+}
+
+#block-user-login form,
+form,
+.webform-client-form,
+#user-register-form 
+{
+	.form-submit
+	{
+	    padding: 0;
+	 }	
+}
+
+#login-block
+{	
+
+	max-width: 580px;
+	margin: 0 auto;
+	
+	.form-submit
+	{
+		width: 240px;
+	    padding: 0;
+	}
+}
+
+a.button,
+#block-user-login .form-submit,
+#user-login-form .form-submit,
+#user-pass .form-submit,
+.webform-client-form .form-submit,
+#user-login-form .button a,
+#user-register-form .form-submit,
+#members-pages-node-form .form-submit,
+form .form-submit
+{
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: white!important;
+	background: $blue;
+	border-radius: 5px;
+    width: 240px;
+    line-height: 50px;
+    vertical-align: middle;
+	font-size:20px;
+	margin: 10px;
+    font-family: FrutigerBold;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: 0px;
+	-webkit-appearance: none;
+
+	&:hover
+	{
+		background:$yellow;
+	}
+}
+
+#members-pages-node-form
+{
+	.resizable-textarea .grippie
+	{
+		display: none;
+	}
+
+	label
+	{
+		display: inline-block;
+	}
+}
+
+#user-login-form
+{
+	.button a,
+	a.button
+	{
+		width: 140px;
+		font-size: 14px;
+	}
+
+	.form-actions
+	{
+		margin-bottom: 0px;
+	}
+}
+
+#block-user-login,
+#login-block,
+#user-register-form,
+form,
+.webform-client-form 
+{	
+	input,
+	select,
+	textarea
+	{
+		border: 1px solid #ccc;
+		padding: 10px;
+		width: 96%;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+
+	textarea
+	{
+		width: 100%;
+	}
+
+	.form-actions,
+	.button
+	{
+		display: inline-block
+	}
+
+	select
+	{
+		height: 42px;
+		color:$lightgrey;
+		width: 100%;
+		background: transparent;
+	}
+
+	::-webkit-input-placeholder
+ 	{ 
+ 		color:#9b9b9b; 
+ 		font-size: 16px;
+ 	}
+	::-moz-placeholder 
+	{ 
+		color:#9b9b9b;
+		font-size: 16px;
+ 	} /* firefox 19+ */
+	:-ms-input-placeholder 
+	{ 
+		color:#9b9b9b; 
+		font-size: 16px;
+	} /* ie */
+	input:-moz-placeholder 
+	{ 
+		color:#9b9b9b; 
+		font-size: 16px;
+	}
+}
+
+.not-front
+{
+	#region-banner
+	{
+		background: url(../images/about.jpg) no-repeat;
+		background-size: cover;
+		min-height: 250px;
+	}
+}
+
+
+#content,
+#blue-region,
+#white-region
+{	
+	overflow: hidden;
+
+	& > div
+	{
+		@extend .layout;
+	}
+
+	p
+	{
+		line-height: 1.8em;
+	}
+
+	ul,ol
+	{
+		margin-left: 20px;
+	}
+}
+
+#blue-region
+{
+	background:$blue;
+	color: white;
+	a
+	{
+		color:$yellow;
+	}
+}
+
+#blue-region h2,
+#main-title
+{	
+	color: white;
+	.first-word
+	{
+		color:white;
+	}
+}
+
+.not-front
+{
+	#main-title
+	{
+		
+		font-size: 3.8em;
+		line-height: 70px;
+		padding: 90px 0px;
+
+	}
+}
+
+#edit-account,
+#edit-account +.container
+{
+	width: 45%;
+	float: left;
+}
+
+#edit-account
+{
+	padding-right: 30px;	
+}
+#user-register-form
+{
+	.field-type-file
+	{
+		width:95%;
+
+		fieldset
+		{
+			display: none;
+		}
+	}
+
+	.field-name-field-application-letter 
+	{
+		clear: left;
+	}
+
+	.description
+	{
+		color:$blue;
+		padding-top:5px;
+	}
+
+	label
+	{
+		padding-bottom:5px;
+	}
+
+}
+
+.page-member-register,
+.page-user-password,
+.page-user
+{
+	.tabs
+	{
+		display: none;
+	}
+}
+
+.username + .description,
+#edit-mail + .description,
+.form-item-pass-pass2 + .description
+{
+	display: none;
+}
+
+#user-register-form
+{
+	.form-actions
+	{
+		clear: left;
+		display: block;
+		text-align: center;
+
+		input,a.button
+		{
+			margin:20px;
+		}
+	}
+
+	p
+	{
+		line-height: 1em;
+		font-size: 14px;
+		color: $blue;
+	}
+}
+
+#edit-profile-main-field-membership-list
+{
+	border-bottom: 2px solid $yellow;
+	padding-bottom: 20px;
+	margin-bottom:30px;
+}
+
+#block-webform-client-block-28,
+#block-block-4
+{
+	float:left;
+	width: 45%;
+
+	h2 .first-word
+	{
+		color:$blue;
+	}
+
+	h2
+	{
+		font-size: 18px;
+		text-align: left;
+		padding-bottom:30px;
+	}
+}
+
+#block-block-4
+{	
+	strong
+	{
+		color: $blue;
+	}
+
+	p
+	{
+		line-height: 1.3em;
+	}
+
+	.location:before,
+	.email:before,
+	.mobile:before
+	{
+		content: "";
+		padding-right:10px;
+		float: left;
+	}
+
+	.mobile:before
+	{
+		content: url(../images/mobile-contact.png);
+	}
+
+	.location:before
+	{
+		content: url(../images/location.png);
+	}
+
+	.email:before
+	{
+		content: url(../images/mail-contact.png);
+	}
+
+	.content
+	{
+		border-left: 2px solid $yellow;
+		padding-left:40px;
+	}
+
+	h2
+	{
+		padding-left:40px;
+	}
+
+	padding-left:30px;
+	margin-left: 30px;
+}
+
+#block-block-5
+{
+	clear:left;
+
+	#map
+	{
+		height: 400px;
+		width:100%;
+	}
+}
+
+.page-node-27 
+{	
+	.region-content
+	{
+		overflow: hidden;
+	}
+
+	#blue-region > div
+	{
+		max-width: 100%;
+		padding:0px;
+	}
+}
+
+
+
+.node-icsa-members
+{	
+	.field-name-field-image-members,
+	.field-name-field-image-members+div
+	{
+		float: left;
+	}
+
+	.field-name-field-image-members
+	{
+		float: left;
+		padding-right:20px;
+		padding-top:20px;
+	}
+
+	.field-name-field-description
+	{
+		padding-top: 30px;
+		clear: left;
+	}
+
+	.field-type-taxonomy-term-reference
+	{
+		display: none;
+	}
+}
+
+#block-block-7
+{
+	display: none;
+}
+
+.view-members-listing
+{	
+	.view-content
+	{
+		text-align: center;
+	}
+	.views-row
+	{
+		padding: 10px 10px;
+		display: inline-block;
+		width: 212px;
+		text-align: center;
+
+		span
+		{
+			display: block;
+		}
+
+		a
+		{
+			text-decoration: none;
+			font-weight: bold;
+
+			&:hover
+			{
+				color:$yellow;
+			}
+		}
+
+		a span:first-child
+		{
+			line-height: 145px;
+			img
+			{
+				vertical-align: middle;
+			}
+		}
+	}
+
+}
+
+
+.view-members-listing,
+.node-type-icsa-members
+{	
+
+	a
+	{
+		color:$darkergrey;
+	}
+
+	.views-field-field-country,
+	.views-name-field-country
+	{
+		font-weight:bold;
+		font-size: 18px;
+		padding-bottom:10px;
+	}
+}
+
+#block-block-8
+{
+	display: none;
+}
+
+.site-map-menu
+{
+	li
+	{
+		list-style: none;
+
+		a
+		{
+			text-decoration: none;
+			display: block;
+			padding: 10px;
+
+			&:hover
+			{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.view-members-area,
+.view-proiles-information
+{	
+	margin-top: 20px;
+	
+	.views-row
+	{
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom:1px solid #ccc;
+		position: relative;
+
+		&:last-child
+		{
+			border-bottom:0px;
+		}
+	}
+
+	.views-label
+	{
+		color:$blue;
+	}
+
+	.view-footer
+	{	
+		a.button
+		{
+			margin: 0px auto;
+			font-weight: bold;
+		}
+	}
+
+	.view-content
+	{
+		border-width: 2px 0px;
+		border-color: $yellow;
+		border-style: solid;
+		margin-bottom: 0px 0px;
+		padding:25px 0px 0px;
+	}
+
+	.view-header
+	{
+		color: $blue;
+		overflow: hidden;
+
+		div h3:first-child
+		{
+			float: left;
+		}
+
+		div h3:first-child+h3
+		{
+			float: right;
+		}
+	}
+
+	.views-field-title
+	{	
+		max-width: 80%;
+
+		a
+		{	
+			font-size: 20px;
+			text-decoration: none;
+		}
+	}
+
+	.views-field-body
+	{
+		padding-top:10px;
+	}
+
+	.views-field-field-date
+	{
+		position: absolute;
+		top: 0px;
+		float: right;
+		right: 0px;
+	}
+
+	.view-footer
+	{
+		margin-top: 50px;
+		text-align: center;
+	}
+
+	.views-field-name
+	{
+		font-weight: bold;
+	}
+}
+
+.node-members_pages-form
+{
+
+	fieldset
+	{
+		border: 0px;
+		padding:0px;
+	}
+
+	.browse-button 
+	{
+		position: absolute;
+		right: 50px;
+		top: 7px;
+		color: #008b7f;
+		font-weight: bold;
+	}
+
+	table
+	{
+		tr
+		{
+			background: transparent;
+		}
+
+		th
+		{	
+			border-bottom: 2px solid $yellow;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+	}
+
+	fieldset.date-combo .container-inline-date .date-padding
+	{
+		padding-left:0px;
+	}
+
+	.form-actions
+	{
+		display: block;
+		text-align: center;
+	}
+
+	#edit-field-file-members
+	{
+		border-bottom: 2px solid $yellow;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	}
+
+	.fieldset-legend
+	{
+		font-weight:bold;
+	}
+
+	.date-combo .fieldset-legend
+	{
+		display: none;
+	}
+}
+
+.node-type-members-pages
+{
+	#page-title 
+	{
+		font-size: 28px;
+		color:$blue;
+
+		.first-word
+		{
+			color:$blue;
+		}
+	}
+
+	.field
+	{
+		padding: 10px 0px;
+	}
+
+	.file a
+	{
+		color: $blue;
+	}
+
+	.field-name-body
+	{
+		line-height: 1.8em;
+	}
+
+	#author-name
+	{	
+		text-align: center;
+		font-size: 14px;
+		color: $blue;
+		padding:10px 0px 30px;
+	}
+
+	.field-name-field-category
+	{
+		display: none;
+	}
+
+	#member-content
+	{
+		border-width:2px 0px;
+		border-color:$yellow;
+		border-style: solid;
+		padding:25px 0px;
+	}
+
+	.list-button
+	{
+		margin-top: 30px;
+	}
+}
+
+.list-button
+{
+	text-align: center;
+}
+
+#error
+{
+	color: red;
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#page-wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+
+#footer {
+	width:100%;
+	position:absolute;
+	bottom:0;
+}
+
+
+#content
+{
+	min-height: 420px;
+}
+
+
+.page-node-33
+{
+	#content{
+		min-height: inherit;
+	}
+}
+
+
+#node-36
+{	
+	td
+	{
+		padding:10px;
+	}
+	td p
+	{
+		padding-bottom:0px;
+	}
+}
+
+
