@@ -141,7 +141,7 @@ function abc($form, &$form_state)
 
   $emailAddress =  $form_state['values']['name'];
 
-  $to = "info@icsa.com";
+  $to = "kcervoni@iiac.ca";
   
   $email_from = "info@icsa.com"; 
  
