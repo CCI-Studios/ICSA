@@ -106,6 +106,8 @@ li, p {
 
 #block-system-main-menu {
   position: static; }
+  #block-system-main-menu li {
+    margin-right: 0px; }
   #block-system-main-menu > .content > .menu > li > a {
     padding-bottom: 32px; }
   #block-system-main-menu > .content {

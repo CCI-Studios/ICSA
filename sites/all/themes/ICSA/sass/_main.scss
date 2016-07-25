@@ -143,6 +143,10 @@ li,p
 
 	position: static;
 
+	li
+	{
+		margin-right: 0px;
+	}
 
 	&>.content>.menu>li>a
 	{
