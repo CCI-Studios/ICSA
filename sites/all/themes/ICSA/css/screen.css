@@ -338,7 +338,8 @@ strong {
   color: white;
   background: #0f71c5;
   text-transform: uppercase;
-  border-radius: 0px 0px 3px 3px; }
+  border-radius: 0px 0px 3px 3px;
+  padding-top: 10px; }
   #login a {
     color: white;
     text-decoration: none;
@@ -865,6 +866,25 @@ body {
 #node-36 td p {
   padding-bottom: 0px; }
 
+#block-search-form {
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  padding-left: 10px; }
+  #block-search-form input {
+    padding-left: 30px;
+    width: 90%; }
+  #block-search-form .form-submit {
+    font-size: 0px;
+    color: transparent;
+    width: auto;
+    line-height: 1em;
+    background: url(../images/search.png) no-repeat;
+    width: 20px;
+    height: 25px;
+    position: absolute;
+    top: 0; }
+
 @media screen and (max-width: 1090px) {
   #navigation > div {
     padding: 0px 10px 20px; }
@@ -1083,7 +1103,10 @@ body {
 
   .view-members-listing .views-row {
     border-bottom: 1px solid #b3b3b3;
-    padding-bottom: 40px; } }
+    padding-bottom: 40px; }
+
+  #block-search-form {
+    width: 118px; } }
 @media screen and (max-width: 392px) {
   #block-views-full-members-block .views-row, #block-views-correspondent-members-block .views-row, .view-icsa-members .views-row {
     padding: 20px 0px;

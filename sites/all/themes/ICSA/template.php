@@ -31,6 +31,11 @@ function icsa_form_alter(&$variables, $form_state, $form_id) {
     $variables['#validate'][] = 'login_val';
   }
 
+  if($form_id == 'search_block_form')
+  {
+      $variables['search_block_form']['#attributes']['placeholder'] = t('Search');
+  }
+
 
 
   if($form_id=='members_pages_node_form')
@@ -66,11 +71,9 @@ function icsa_form_alter(&$variables, $form_state, $form_id) {
 
   if($form_id=='user_pass')
   { 
-
     $variables['#submit'][] = 'abc';
   }
 
- 
 
   if($form_id=='user_register_form')
   { 

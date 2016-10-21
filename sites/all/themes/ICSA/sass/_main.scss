@@ -558,6 +558,7 @@ strong
 	background:$blue;
 	text-transform:uppercase;
 	border-radius: 0px 0px 3px 3px;
+	padding-top: 10px;
 
 	a
 	{
@@ -1403,4 +1404,32 @@ body {
 	}
 }
 
+
+#block-search-form
+{
+    width: 200px;
+    position: absolute;
+    top: 10px;
+    padding-left: 10px;
+
+    input
+    {
+    	padding-left: 30px;
+    	width: 90%;
+    }
+
+    .form-submit
+    {
+    	font-size: 0px;
+    	color: transparent;
+    	width: auto;
+    	line-height: 1em;
+    	background: url(../images/search.png) no-repeat;
+	    width: 20px;
+	    height: 25px;
+	    position: absolute;
+	    top: 0;
+
+    }
+}
 
