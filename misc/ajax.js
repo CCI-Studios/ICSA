@@ -149,7 +149,7 @@ Drupal.ajax = function (base, element, element_settings) {
   // The 'this' variable will not persist inside of the options object.
   var ajax = this;
   ajax.options = {
-    url: ajax.url,
+    url: Drupal.sanitizeAjaxUrl(ajax.url),
     data: ajax.submit,
     beforeSerialize: function (element_settings, options) {
       return ajax.beforeSerialize(element_settings, options);
@@ -195,6 +195,7 @@ Drupal.ajax = function (base, element, element_settings) {
       }
     },
     dataType: 'json',
+    jsonp: false,
     type: 'POST'
   };
 
@@ -202,12 +203,12 @@ Drupal.ajax = function (base, element, element_settings) {
   // submission to an iframe instead of using an XHR object. The initial "src"
   // of the iframe, prior to the form submission, is set to options.iframeSrc.
   // "about:blank" is the semantically correct, standards-compliant, way to
-  // initialize a blank iframe; however, some old IE versions (including 6,
-  // unclear for 7-10, but not 11) incorrectly report a mixed content warning
-  // when iframes with an "about:blank" src are added to a parent document with
-  // an https:// origin. jQuery Form works around this by defaulting to
-  // "javascript:false" instead, but that breaks on Chrome 83, so here we
-  // force the semantically correct behavior for all browsers except old IE.
+  // initialize a blank iframe; however, some old IE versions (possibly only 6)
+  // incorrectly report a mixed content warning when iframes with an
+  // "about:blank" src are added to a parent document with an https:// origin.
+  // jQuery Form works around this by defaulting to "javascript:false" instead,
+  // but that breaks on Chrome 83, so here we force the semantically correct
+  // behavior for all browsers except old IE.
   // @see https://www.drupal.org/project/drupal/issues/3143016
   // @see https://github.com/jquery-form/form/blob/df9cb101b9c9c085c8d75ad980c7ff1cf62063a1/jquery.form.js#L68
   // @see https://bugs.chromium.org/p/chromium/issues/detail?id=1084874
